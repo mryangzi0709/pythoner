@@ -1,0 +1,39 @@
+Git 是代码管理工具   GitHub是站点
+mkdir newgame	#创建文件夹newgame
+cd newgame	#进入newgame文件夹
+git init		#进行初始化
+ls		#查看当前目录
+git status		#查看当前状态
+在文件夹中添加一些文档，对本文件夹进行一定改动之后
+git add ./		#将现有的文件夹中的改动提交到暂存区
+git commit -m “first_commit"	#提交到代码库 first_commit为更新备注
+
+git config --global user.email ...		#注册邮箱
+git config --global user.name ...	#注册用户名
+
+git remote add origin https://...		#保存远端地址，并在本地的command line命令行工具中，添加远端主干地址
+git push -u origin master	#将变动推送到主干master上
+
+后期在跟新时
+git add ./
+git commit -m 'instruction'
+git push
+
+git checkout -b 'newbranch'	#创建新的分支branch，同时进入该新branch
+git checkout master		#改回master主干使用
+git branch -a	#查看所有线路
+
+git log 		#查看过去记录
+git clone https://...	#直接克隆
+
+git merge		#合并分支并处理冲突
+resolve conflicts
+
+高级设置：过往分支记录可视化展示
+在HOME文件下，打开隐藏文件.gitconfig，没有就新建一个，内容如下：
+[alias]
+	lg=log --graph --pretty=oneline --abbrev-commit
+之后使用
+	git lg
+
+
